@@ -7,10 +7,6 @@ class Post < ApplicationRecord
     author.increment(:posts_counter)
   end
 
-  :title
-  :author_id
-  :likes_counter
-
   def last_five_comments
     comments.last(5)
   end
