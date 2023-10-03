@@ -3,6 +3,5 @@ class UsersController < ApplicationController
     puts :users
   end
 
-  def show
-  end
+  def show; end
 end

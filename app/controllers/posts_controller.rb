@@ -3,6 +3,5 @@ class PostsController < ApplicationController
     puts :posts
   end
 
-  def show
-  end
+  def show; end
 end
