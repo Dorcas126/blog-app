@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
+  # GET /users/:user_id/posts
   def index
-    puts :users
+    @users = User.all
   end
 
-  def show; end
+  # GET /users/:user_id/posts/:id
+  def show
+    params[:id]
+  end
 end
