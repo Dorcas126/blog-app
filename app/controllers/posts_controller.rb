@@ -8,3 +8,4 @@ class PostsController < ApplicationController
   def show
     params[:id]
   end
+end
