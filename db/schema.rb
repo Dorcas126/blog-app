@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_26_105601) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_04_205543) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -37,18 +37,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_26_105601) do
     t.bigint "author_id", null: false
     t.string "title"
     t.string "text"
-    t.integer "comments_Counter"
-    t.integer "likes_counter"
+    t.integer "comments_counter", default: 0
+    t.integer "likes_counter", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.index ["author_id"], name: "index_posts_on_author_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "photo"
     t.string "bio"
-    t.integer "posts_counter"
+    t.integer "posts_counter", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -57,5 +59,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_26_105601) do
   add_foreign_key "comments", "users"
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users"
+  add_foreign_key "posts", "users"
   add_foreign_key "posts", "users", column: "author_id"
 end
