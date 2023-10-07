@@ -1,19 +1,12 @@
 Rails.application.routes.draw do
-  # get 'posts/show'
-  # get 'users/show'
-  # root 'user#index'
+  # Root route
   root 'users#index'
-  # get 'post/show'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-
+  # Define resources for users, posts, comments, and likes
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show, :new, :create]
-    resources :comments, only: [:create]
-
-  resources :posts do 
-    resources :likes, only: [:create]
+    resources :posts, only: [:index, :show, :new, :create] do
+      resources :comments, only: [:create]
+      resources :likes, only: [:create]
+    end
   end
-end
 end
