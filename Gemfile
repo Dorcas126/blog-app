@@ -7,6 +7,7 @@ ruby '3.2.2'
 
 gem 'devise'
 
+gem 'letter_opener'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.8'
@@ -76,5 +77,6 @@ end
 group :test do
   gem 'selenium-webdriver'
 end
+
 
 gem 'faker'
