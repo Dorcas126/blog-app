@@ -106,6 +106,12 @@ To run the project, run `ruby <filename>` in your terminal
 - Twitter: [@Dorcasuw](https://twitter.com/Dorcasuwi)
 - LinkedIn: [Uwimbabazi Dorcas](https://www.linkedin.com/in/uwimbabazi-dorcas-956a5a226/)
 
+👤 **Tchasinga jacques**
+- GitHub: [@Tchasinga Jack](https://github.com/tchasinga)
+- Twitter: [@tchasingajacques](https://twitter.com/TchasingaJacque)
+- LinkedIn: [@tchasingajaques](https://www.linkedin.com/in/tchasinga-jacques-76aba7214/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
